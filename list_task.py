@@ -25,7 +25,10 @@ print(trainees)
 
 #6. Remove John and Mary from the list.
 trainees=["John",[2,["James","Mary"]]]
+trainees.pop(0)
+print(trainees)
 trainees[0][1].pop()
+print(trainees)
 
 
 #7. Using a function, determine the length of the list
