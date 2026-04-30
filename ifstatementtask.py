@@ -25,16 +25,18 @@ else:
 
 transaction_amount=input('Enter transaction amount: ')
 transaction_amount=int(transaction_amount)
-account_type=input('Enter account type: ')
+account_type=input('Enter account type Standard/Premium: ').lower()
 
-if account_type=='Standard':
+if account_type=='standard':
     if transaction_amount>500:
         print( "Transaction exceeds the limit for Standard accounts.")
     else:
         print("Transaction approved.")
-elif account_type=='Premium':
+elif account_type=='premium':
     if transaction_amount>1000:
         print("Transaction exceeds the limit for Premium accounts")
+    else:
+        print('Transaction Approved')
 else:
     print("Wrong account type")
 
@@ -44,7 +46,7 @@ else:
 # If both dates are the same, print "One-day period".
 start_date =='2024-01-01'
 end_date =='2024-12-31'
-if start_date>end_date:
+if start_date<end_date:
     print('Valid period')
 elif start_date==end_date:
     print('One_day period')
@@ -81,10 +83,11 @@ else:
 # Prints "String Detected" if value is a string.
 # Prints "Integer Detected" if value is an integer.
 # Prints "Unknown Type" for any other type.
+#/isinstance
 value=input('Enter value: ')
-if value==str:
+if type(value)==str:
     print('String detected')
-elif value==int:
+elif type(value)==int:
     print('Integer Detected')
 else:
     print('Unknown Type')
